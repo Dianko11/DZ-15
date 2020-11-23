@@ -72,7 +72,13 @@
 	}
 }
 
-.btn-wrapper button {
+.btn-wrapper {
+	display: flex;
+	justify-content: center;
+	@include media ('>=tablet') {
+		justify-content: left;
+	}	
+	button {
 	color: $aqua-blue;
 	padding: 15px;
 	border: solid 1px $aqua-blue;
@@ -82,6 +88,7 @@
 	font-weight: normal;
 	background-color: $white;
 	transition: background-color .3s, color .3s;
+	}
 	&:hover {
 		background-color: $aqua-blue;
 		color: $white;
